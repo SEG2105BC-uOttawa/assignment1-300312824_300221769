@@ -25,7 +25,7 @@ public class PointCP3 extends PointCP5 {
 
         this.xOrRho = xOrRho;
         this.yOrTheta = yOrTheta;
-        typeCoord = 'C';
+        typeCord = 'C';
     }
 
 
@@ -75,7 +75,7 @@ public class PointCP3 extends PointCP5 {
      */
     public String toString()
     {
-        return "Stored as " + (typeCoord == 'C'
+        return "Stored as " + (typeCord == 'C'
                 ? "Cartesian  (" + getX() + "," + getY() + ")"
                 : "Polar [" + getRho() + "," + getTheta() + "]") + "\n";
     }

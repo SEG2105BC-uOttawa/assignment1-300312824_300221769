@@ -26,7 +26,7 @@ public class PointCP2 extends PointCP5
     {
         this.xOrRho = xOrRho;
         this.yOrTheta = yOrTheta;
-        typeCoord = type;
+        typeCord = type;
     }
 
 
@@ -37,7 +37,7 @@ public class PointCP2 extends PointCP5
      * Not required until E2.30
      *
      * @param // The point to rotate
-     * @param rotation The number of degrees to rotate the point.
+     * @param rotation Th    e number of degrees to rotate the point.
      * @return The rotated image of the original point.
      */
     public PointCP5 rotatePoint(double rotation)

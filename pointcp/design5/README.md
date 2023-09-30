@@ -1,4 +1,3 @@
-
 # Installing and Running PointCP
 
 PointCP demonstrates now a class can be designed that will support both
