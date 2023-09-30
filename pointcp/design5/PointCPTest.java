@@ -44,9 +44,9 @@ public class PointCPTest
     // If he did not, prompt the user for them.
     try
     {
-      point = new PointCP(args[0].toUpperCase().charAt(0), 
-        Double.valueOf(args[1]).doubleValue(), 
-        Double.valueOf(args[2]).doubleValue());
+      point = new PointCP(args[0].toUpperCase().charAt(0),
+              Double.valueOf(args[1]).doubleValue(),
+              Double.valueOf(args[2]).doubleValue());
     }
     catch(Exception e)
     {
@@ -87,7 +87,7 @@ public class PointCPTest
     byte[] buffer = new byte[1024];  //Buffer to hold byte input
     boolean isOK = false;  // Flag set if input correct
     String theInput = "";  // Input information
-    
+
     //Information to be passed to the constructor
     char coordType = 'A'; // Temporary default, to be set to P or C
     double a = 0.0;
@@ -99,7 +99,7 @@ public class PointCPTest
       while (!(isOK))
       {
         isOK = true;  //flag set to true assuming input will be valid
-          
+
         // Prompt the user
         if (i == 0) // First argument - type of coordinates
         {
@@ -107,29 +107,29 @@ public class PointCPTest
         }
         else // Second and third arguments
         {
-          System.out.print("Enter the value of " 
-            + (coordType == 'C' 
-              ? (i == 1 ? "X " : "Y ")
-              : (i == 1 ? "Rho " : "Theta ")) 
-            + "using a decimal point(.): ");
+          System.out.print("Enter the value of "
+                  + (coordType == 'C'
+                  ? (i == 1 ? "X " : "Y ")
+                  : (i == 1 ? "Rho " : "Theta "))
+                  + "using a decimal point(.): ");
         }
 
         // Get the user's input      
-       
+
         // Initialize the buffer before we read the input
         for(int k=0; k<1024; k++)
-        	buffer[k] = ' ';
-             
+          buffer[k] = ' ';
+
         System.in.read(buffer);
         theInput = new String(buffer).trim();
-        
+
         // Verify the user's input
         try
         {
           if (i == 0) // First argument -- type of coordinates
           {
-            if (!((theInput.toUpperCase().charAt(0) == 'C') 
-              || (theInput.toUpperCase().charAt(0) == 'P')))
+            if (!((theInput.toUpperCase().charAt(0) == 'C')
+                    || (theInput.toUpperCase().charAt(0) == 'P')))
             {
               //Invalid input, reset flag so user is prompted again
               isOK = false;
@@ -150,8 +150,8 @@ public class PointCPTest
         }
         catch(Exception e)
         {
-        	System.out.println("Incorrect input");
-        	isOK = false;  //Reset flag as so not to end while loop
+          System.out.println("Incorrect input");
+          isOK = false;  //Reset flag as so not to end while loop
         }
       }
 
