@@ -1,6 +1,8 @@
-// This file contains material supporting section 2.9 of the textbook:
+package design5;// This file contains material supporting section 2.9 of the textbook:
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at http://www.site.uottawa.ca/school/research/lloseng/
+
+import design1.PointCP;
 
 import java.io.*;
 
@@ -21,15 +23,15 @@ public class PointCPTest
    * This method is responsible for the creation of the PointCP
    * object.  This can be done in two ways; the first, by using the
    * command line and running the program using <code> java 
-   * PointCPTest &lt;coordtype (c/p)&gt; &lt;X/RHO&gt; &lt;Y/THETA&gt;
+   * design5.PointCPTest &lt;coordtype (c/p)&gt; &lt;X/RHO&gt; &lt;Y/THETA&gt;
    * </code> and the second by getting the program to prompt the user.
    * If the user does not enter a valid sequence at the command line,
    * the program will prompte him or her.
    *
-   * @param args[0] The coordinate type.  P for polar and C for
+   * //@param args[0] The coordinate type.  P for polar and C for
    *                cartesian.
-   * @param args[1] The value of X or RHO.
-   * @param args[2] The value of Y or THETA.
+   * //@param args[1] The value of X or RHO.
+   * //@param args[2] The value of Y or THETA.
    */
   public static void main(String[] args)
   {
@@ -101,8 +103,7 @@ public class PointCPTest
         // Prompt the user
         if (i == 0) // First argument - type of coordinates
         {
-          System.out.print("Enter the type of Coordinates you "
-            + "are inputting ((C)artesian / (P)olar): ");
+          System.out.print("Enter the type of Coordinates you are inputting ((C)artesian) / (P)olar): ");
         }
         else // Second and third arguments
         {
@@ -117,7 +118,7 @@ public class PointCPTest
        
         // Initialize the buffer before we read the input
         for(int k=0; k<1024; k++)
-        	buffer[k] = '\u0020';        
+        	buffer[k] = ' ';
              
         System.in.read(buffer);
         theInput = new String(buffer).trim();

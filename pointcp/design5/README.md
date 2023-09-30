@@ -10,11 +10,11 @@ Lethbridge and Lagani&egrave;re.</p>
 To compile the files execute the following command
 
 ```
-javac PointCP.java PointCPTest.java
+javac PointCP.java design5.PointCPTest.java
 ```
 
 To run the program
 
 ```
-java PointCPTest
+java design5.PointCPTest
 ```

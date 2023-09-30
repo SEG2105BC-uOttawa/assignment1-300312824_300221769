@@ -72,13 +72,13 @@ cd pointcp
 Before making any changes, compile the code and make sure it runs.
 
 ```
-javac PointCP.java PointCPTest.java
+javac PointCP.java design5.PointCPTest.java
 ```
 
 To run the program
 
 ```
-java PointCPTest
+java design5.PointCPTest
 ```
 You can, of course, run the programs using the Eclipse IDE (or your preferred IDE).
 
@@ -91,8 +91,8 @@ By modifying the original version (Design 1), implement the following designs.
 * design 3 (add code in `/design3` directory). Add your code in  `PointCP3.java` . 
 * design 5 (add code in `/design6` directory). Add your code in  `PointCP5.java` and modify your existing  `PointCP2.java` and  `PointCP3.java` (to adapt them to the new design requirements. 
 
-4. Modify the `PointCPTest` class to allow you to test the designs you
-have developed. Do a thorough series of tests to ensure your classes work properly. You can implement other classes to facilitate the task or add any extar functions to the `PointCPTest` class. 
+4. Modify the `design5.PointCPTest` class to allow you to test the designs you
+have developed. Do a thorough series of tests to ensure your classes work properly. You can implement other classes to facilitate the task or add any extar functions to the `design5.PointCPTest` class. 
 
 5. Hand in your answers to exercises E26 (table of what you think will be the advantages and
 disadvantages of each design), and E28-E30 (performance analysis, comparing all three
