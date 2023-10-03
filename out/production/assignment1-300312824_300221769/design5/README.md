@@ -1,4 +1,3 @@
-
 # Installing and Running PointCP
 
 PointCP demonstrates now a class can be designed that will support both
@@ -10,11 +9,11 @@ Lethbridge and Lagani&egrave;re.</p>
 To compile the files execute the following command
 
 ```
-javac PointCP.java design5.PointCPTest.java
+javac PointCP.java PointCPTest.java
 ```
 
 To run the program
 
 ```
-java design5.PointCPTest
+java PointCPTest
 ```

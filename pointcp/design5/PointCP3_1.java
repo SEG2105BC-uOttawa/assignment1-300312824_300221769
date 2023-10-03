@@ -14,39 +14,49 @@ package design5;
  * @author Dr Timothy C. Lethbridge
  * @version July 2000
  */
-public class PointCP2 extends PointCP5
+public class PointCP3_1 extends PointCP5
 {
-
     //Constructors ******************************************************
 
     /**
      * Constructs a coordinate object, with a type identifier.
      */
-    public PointCP2(char type, double xOrRho, double yOrTheta)
-    {
-        this.xOrRho = xOrRho;
-        this.yOrTheta = yOrTheta;
-        typeCord = type;
+    public PointCP3_1(double x, double y) {
+        super('C', x, y);
     }
 
 
     //Instance methods **************************************************
 
-    /**
-     * Rotates the specified point by the specified number of degrees.
-     * Not required until E2.30
-     *
-     * @param // The point to rotate
-     * @param rotation Th    e number of degrees to rotate the point.
-     * @return The rotated image of the original point.
-     */
-    public PointCP5 rotatePoint(double rotation)
+
+    public double getX()
+    {
+        return this.xOrRho;
+    }
+
+    public double getY()
+    {
+        return this.yOrTheta;
+    }
+
+    public double getRho()
+    {
+        return (Math.sqrt(Math.pow(this.getX(), 2) + Math.pow(this.getY(), 2)));
+    }
+
+    public double getTheta()
+    {
+        return Math.toDegrees(Math.atan2(this.getY(), this.getX()));
+    }
+
+
+    public PointCP3_1 rotatePoint(double rotation)
     {
         double radRotation = Math.toRadians(rotation);
         double X = getX();
         double Y = getY();
 
-        return new PointCP2('C',
+        return new PointCP3_1(
                 (Math.cos(radRotation) * X) - (Math.sin(radRotation) * Y),
                 (Math.sin(radRotation) * X) + (Math.cos(radRotation) * Y));
     }
@@ -58,6 +68,6 @@ public class PointCP2 extends PointCP5
      */
     public String toString()
     {
-        return ("Stored as Polar [" + getRho() + "," + getTheta() + "]" + "\n");
+        return "Stored as Cartesian  (" + getX() + "," + getY() + ")";
     }
 }
